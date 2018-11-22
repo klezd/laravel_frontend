@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color:  #ffffff;
+    border-top: 10px solid #22b5ae;
+}
+
+html, body {
+    height: 100%;
+}
+
+.navbar {
+    flex: 1 0 auto;
+}
+
+.content {
+    margin: auto;
+}
+.container {
+    max-width: 90%;
+}
+
+.footer {
+    background-color:#4a4a4a ;
+    color:white;
+    padding: 10px 30px; 
+    margin-bottom: 0;
+    bottom: 0; 
+    -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+@media (min-width: 940px) {
+    .content .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+        max-width: 100%;
+    }
+    .content .container {
+        max-width: 90% ;
+    }
+}
+
+@media (max-width: 768px) {
+    /** Stop pushing content down when collapsing menu */
+    .navbar {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .content {
+        margin-top: 90px;
+        position: relative;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer {
+        background-color:#4a4a4a ;
+        padding: 10px; 
+        -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1;
+        flex-shrink: 0;
+    
+    }
+}

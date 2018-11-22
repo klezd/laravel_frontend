@@ -1,0 +1,146 @@
+/* Navbar styles */
+.navbar {
+    background-color: white !important; 
+}
+
+.navbar .nav-brand {
+    width: 200px;
+    float: left;
+}   
+
+.navbar .nav-brand img {
+    margin: 0;
+    width: 100%
+}
+
+#main-navbar {
+    
+}
+.navbar a:not(#shopping-cart) {
+    color: black;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: black;
+}
+
+.navbar a#sale {
+    color: red;
+}
+
+.top-bar {
+    width: 100%
+}
+
+.nav-fa-icons {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#shopping-cart {
+    border: #dddddd 1px solid;
+    border-radius: 3px;
+    display: block;
+    padding: 4px;
+    background-color: #dddddd;
+    font-size: 18px;
+}
+
+.nav-btn {
+    float: right;
+    height: 100%;
+    margin: 0 5px; 
+    /* Internet Explorer 10 */
+    display:-ms-flexbox;
+    -ms-flex-pack:center;
+    -ms-flex-align:center;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+}
+
+.navbar-toggler {
+    background-color: #dddddd!important;
+    border-color: #dddddd!important;
+}
+
+#cart-info {
+    display: none;
+}
+
+li.nav-item {
+    padding: 0 10px;
+    border: solid 4px #ffffff;
+}
+
+/** Nav bar hover and active styles */
+li.nav-item:hover a.nav-link:not(#sale){
+    color: white !important
+}
+li.nav-item:hover{
+    background-color: #2b2a2a !important;
+    border: none;
+    border-bottom: #22b5ae 4px solid;
+}
+#shopping-cart:hover {
+    text-decoration: none;
+}
+/** Responsive */
+
+@media (min-width: 940px) {
+    .navbar .nav-brand {
+        width: 250px
+    }   
+}
+
+@media (min-width: 768px) {
+    .top-bar {
+        border-bottom: 5px solid black;
+    }
+    #cart-info {
+        display: inline;
+    }
+    #shopping-cart {
+        border: #4a4a4a 1px solid;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: #ffffff;
+        color: #4a4a4a !important;
+    }   
+
+}
+
+
+@media (max-width: 576px) {
+    .navbar .nav-brand {
+        width: 160px
+    }    
+    .navbar-toggler {
+        text-align: right;
+        cursor: pointer; 
+    }
+    .nav-fa-icons {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar .nav-brand {
+        width: 120px
+    }
+    
+}
