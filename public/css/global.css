@@ -150,15 +150,17 @@ input[type="text"] {
     .content .container {
         max-width: 80%;
     }
+    
     .footer .col {
         width: 28% !important;
         display: inline-block;
     }
+
     .footer .col.newsletter {
          width: 40%  !important ;
     }
   
-    input[type="email"] {
+    input[type="text"] {
          width: 60%;
     }
 }
