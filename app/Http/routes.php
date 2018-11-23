@@ -11,9 +11,7 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return view('index');
-});
+$app->get('/', 'IndexController@index');
 
 $app->get('instruction', function () use ($app) {
     return view('instruction');
@@ -21,8 +19,4 @@ $app->get('instruction', function () use ($app) {
 
 $app->get('cart/get', 'CartController@get');
 
-$app->get('newsletter/subscribe', 'NewsletterController@subscribe');
-
-$app->get('foo', function () {
-    return 'Hello World';
-});
+$app->post('newsletter/subscribe', 'NewsletterController@subscribe');

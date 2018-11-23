@@ -58,6 +58,7 @@
                 <a href="#">SALE</a>
             </div>           
         </div> -->
+        <div style="min-height:100% !important;">
         <nav class="navbar navbar-expand-md navbar-light bg-light" id="navbar">  
             <div class="container">
                 <div class="d-flex flex-column align-items-start w-100">
@@ -123,16 +124,43 @@
             </div>
         </div>
         <div class="footer">
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <div class="d-flex justify-content-center flex-row flex-wrap footer-wrap">
+                <div class="col">
+                    <h1>TOP CATEGORIES</h1>
+                    <ul>
+                        <li> <a href="#">WOMEN</a> </li>
+                        <li> <a href="#">MEN</a> </li>
+                        <li> <a href="#">JUNIOR</a> </li>
+                        <li> <a href="#">ACCESSORIES</a> </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>CUSTOMER SERVICE</h1>
+                    <ul>
+                        <li> <a href="#">RETURNS</a> </li>
+                        <li> <a href="#">SHIPPING</a> </li>
+                        <li> <a href="#">ABOUT US</a> </li>
+                        <li> <a href="#">CONTACT US</a> </li>
+                    </ul>
+                </div>
+                <div class="col newsletter align-self-start flex-grow-1">
+                    <h1>NEWSLETTER</h1>
+                    <div class="form-container d-flex flex-row">
+                        <form action="newsletter/subscribe" class="footer-form" id="newsletter-submit-form">
+                            <input type="text" name="email" id="email" placeholder=" &#xf003; Enter your email address"/>
+                            <input type="submit" class="submit-btn" value="SUBSCRIBE" >
+                        </form>
+                    </div>
+                    <div class="loading-res" id="sub-status">
+                        <span class="subscribe-loading"><i class="fa fa-spinner"></i> Subscribing to newsletter</span>
+                    </div>
 
+                </div>
+            </div>  
         </div>
-      
-
-        
-
-
+    </div>
         <!-- bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!--custom scripts-->
