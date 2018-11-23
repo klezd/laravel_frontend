@@ -12,53 +12,7 @@
         <link rel="stylesheet" href="css/navbar.css">
     </head>
     <body onresize="sideChange()" onload="sideChange()">
-
-        <!--<a href="#">ACCESSORIES</a>
-                <div class="dropdown">
-                    <a href="#" class="collections-menu">COLLECTIONS</a>                       
-                    <ul class="dropdown-menu dropdown-firstmenu">
-                        <li class="dropdown-submenu">
-                            <a tabindex="-1" href="#">2014</a>
-                            <ul class="dropdown-secondmenu dropdown-menu">
-                                <li><a tabindex="-1" href="#">SPRING</a></li>
-                                <li><a href="#">SUMMER</a></li>
-                                <li><a href="#">AUTUMN</a></li>
-                                <li><a href="#">WINTER</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a tabindex="-1" href="#">2013</a>
-                            <ul class="dropdown-secondmenu dropdown-menu">
-                                <li><a tabindex="-1" href="#">SPRING</a></li>
-                                <li><a href="#">SUMMER</a></li>
-                                <li><a href="#">AUTUMN</a></li>
-                                <li><a href="#">WINTER</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a tabindex="-1" href="#">2012</a>
-                            <ul class="dropdown-secondmenu dropdown-menu">
-                                <li><a tabindex="-1" href="#">SPRING</a></li>
-                                <li><a href="#">SUMMER</a></li>
-                                <li><a href="#">AUTUMN</a></li>
-                                <li><a href="#">WINTER</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a tabindex="-1" href="#">2011</a>
-                            <ul class="dropdown-secondmenu dropdown-menu">
-                                <li><a tabindex="-1" href="#">SPRING</a></li>
-                                <li><a href="#">SUMMER</a></li>
-                                <li><a href="#">AUTUMN</a></li>
-                                <li><a href="#">WINTER</a></li>    
-                            </ul>
-                        </li>                            
-                    </ul>
-                </div> 
-                <a href="#">SALE</a>
-            </div>           
-        </div> -->
-        <div style="min-height:100% !important;">
+    <div class="body-wrap d-flex flex-column">
         <nav class="navbar navbar-expand-md navbar-light bg-light" id="navbar">  
             <div class="container">
                 <div class="d-flex flex-column align-items-start w-100">
@@ -80,14 +34,17 @@
                                     <i class="fa fa-shopping-cart nav-fa-icons"></i> &nbsp;
                                     <span id="cart-info">3 items in cart</span>
                                     
-                                </a>                            
+                                </a>
+                                <div class="shopping-cart-info" id="shopping-cart-info">
+                                    
+                                </div>                   
                             </div>
                         </div>
                     </div>     
 
                       
                     <div class="collapse navbar-collapse  ml-2 top-bar" id="main-navbar">
-                            <a class="navbar-brand" href="#"></a>
+                        <a class="navbar-brand" href="#"></a>
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">WOMEN </a>
@@ -101,9 +58,49 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">ACCESSORIES</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">COLLECTIONS</a>
+                            <!-- drop down -->
+                            <li class="nav-item collections">
+                                <a class="nav-link collections" href="#">COLLECTIONS</a>
+                                <ul class="dropdown-menu dropdown-firstmenu">
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">2018 <span class="dropdown-caret"><i class="fa fa-caret-right"></i></span></a>
+                                        <ul class="dropdown-secondmenu dropdown-menu">
+                                            <li><a tabindex="-1" href="#">SPRING</a></li>
+                                            <li><a href="#">SUMMER</a></li>
+                                            <li><a href="#">AUTUMN</a></li>
+                                            <li><a href="#">WINTER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">2017 <span class="dropdown-caret"><i class="fa fa-caret-right"></i></span></a>
+                                        <ul class="dropdown-secondmenu dropdown-menu">
+                                            <li><a tabindex="-1" href="#">SPRING</a></li>
+                                            <li><a href="#">SUMMER</a></li>
+                                            <li><a href="#">AUTUMN</a></li>
+                                            <li><a href="#">WINTER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">2016 <span class="dropdown-caret"><i class="fa fa-caret-right"></i></span></a>
+                                        <ul class="dropdown-secondmenu dropdown-menu">
+                                            <li><a tabindex="-1" href="#">SPRING</a></li>
+                                            <li><a href="#">SUMMER</a></li>
+                                            <li><a href="#">AUTUMN</a></li>
+                                            <li><a href="#">WINTER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#">2015 <span class="dropdown-caret"><i class="fa fa-caret-right"></i></span></a>
+                                        <ul class="dropdown-secondmenu dropdown-menu">
+                                            <li><a tabindex="-1" href="#">SPRING</a></li>
+                                            <li><a href="#">SUMMER</a></li>
+                                            <li><a href="#">AUTUMN</a></li>
+                                            <li><a href="#">WINTER</a></li>    
+                                        </ul>
+                                    </li>                            
+                                </ul>
                             </li>
+                            <!-- end drop down -->
                             <li class="nav-item">
                                 <a class="nav-link" href="#" id="sale">SALE</a>
                             </li>
@@ -122,7 +119,7 @@
             <div class="container">
                 @yield('page-content')
             </div>
-        </div>
+        </div> <!-- end content page -->
         <div class="footer">
             <div class="d-flex justify-content-center flex-row flex-wrap footer-wrap">
                 <div class="col">
@@ -157,7 +154,7 @@
 
                 </div>
             </div>  
-        </div>
+        </div> <!-- end footer -->
     </div>
         <!-- bootstrap -->
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>

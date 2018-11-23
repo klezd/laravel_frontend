@@ -1,5 +1,5 @@
 /* Navbar styles */
-.navbar {
+#navbar {
     background-color: white !important; 
 }
 
@@ -13,16 +13,14 @@
     width: 100%
 }
 
-#main-navbar {
-    
-}
 .navbar a:not(#shopping-cart) {
     color: black;
     font-weight: bold;
 }
 
-.navbar a {
+.navbar a.nav-link {
     color: black;
+    font-size: 14px;
 }
 
 .navbar a#sale {
@@ -86,29 +84,64 @@ li.nav-item {
     border: solid 4px #ffffff;
 }
 
+/** Dropdown */
+ul.dropdown-menu {
+    background-color: #b3c6c7;
+}
+.dropdown-caret {
+    display: none;
+}
+li.nav-item.collections {
+    position: relative;
+}
+li.nav-item.collections a:not(.collections) {
+    font-weight: 400 !important;
+}
+
+li.nav-item.collections .dropdown-menu .dropdown-submenu , ul.dropdown-secondmenu li{
+    position: relative;
+    padding: 3px 8px;
+}
+
+li.nav-item.collections .dropdown-menu .dropdown-submenu a {
+    font-weight: 400;
+}
+li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
+    position: absolute;
+    top: 0;
+    left: 158px;
+    z-index: 1000;
+    display: none!important;
+}
+
+
 /** Nav bar hover and active styles */
-li.nav-item:hover a.nav-link:not(#sale){
-    color: white !important
-}
-li.nav-item:hover{
-    background-color: #2b2a2a !important;
-    border: none;
-    border-bottom: #22b5ae 4px solid;
-}
+
 #shopping-cart:hover {
     text-decoration: none;
 }
-/** Responsive */
+.navbar a:hover {
+    text-decoration:none;
+}
 
+/** Responsive */
 @media (min-width: 940px) {
     .navbar .nav-brand {
         width: 250px
-    }   
+    }
+    .nav-container {    
+        min-width: 900px;
+    }
 }
 
 @media (min-width: 768px) {
     .top-bar {
         border-bottom: 5px solid black;
+    }
+    .nav-container {    
+        min-width: 760px !important;
+        width: auto;
+        max-width: 800px !important;
     }
     #cart-info {
         display: inline;
@@ -119,10 +152,50 @@ li.nav-item:hover{
         padding: 5px 10px;
         background-color: #ffffff;
         color: #4a4a4a !important;
-    }   
-
+    }
+    .dropdown-caret {
+        float: right;
+        visibility: visible;
+    }
+    /** hover li nav item effect works only when the nav is not collapsed*/
+    li.nav-item:hover{
+        background-color: #2b2a2a !important;
+        border: none;
+        border-bottom: #22b5ae 4px solid;
+    }
+    li.nav-item:hover a.nav-link:not(#sale){
+        color: white !important
+    }
+    li.nav-item.collections .dropdown-menu .dropdown-submenu:hover, ul.dropdown-secondmenu li:hover {
+        background-color: #a19f9e;
+    }
+    li.nav-item.collections .dropdown-menu .dropdown-submenu:hover .dropdown-menu  {
+        display: block !important;
+        position: absolute;
+    }
+    li.nav-item.collections:hover .dropdown-menu {
+        display: block !important;
+    }
+ }
+@media (max-width: 768px) {
+    li.nav-item.collections .dropdown-menu {
+        display: block !important;
+        background-color: white;
+        border: none;
+    }
+     li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: block!important
+    }
+    li.nav-item {        
+        display: block;
+        width: 100%;
+        border-bottom: #b3c6c7 1px solid;
+    }
 }
-
 
 @media (max-width: 576px) {
     .navbar .nav-brand {
@@ -142,5 +215,4 @@ li.nav-item:hover{
     .navbar .nav-brand {
         width: 120px
     }
-    
 }

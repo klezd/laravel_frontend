@@ -10,15 +10,14 @@ body {
     font-family: 'Open Sans', FontAwesome ,sans-serif;
     background-color:  #ffffff;
     border-top: 10px solid #22b5ae;
-    background-color:#a19f9e ;
 }
 
 html, body {
-    height: 100%;
+    height: 100vh;
 }
 
-.navbar {
-    flex: 1 0 auto;
+.body-wrap {
+    min-height: 100%
 }
 
 .content {
@@ -31,12 +30,14 @@ html, body {
 }
 /** Footer */
 .footer {
+    background-color:#b3c6c7 ;
     color:white !important;
     padding: 10px 30px; 
     margin-bottom: 0;
     bottom: 0; 
     height: auto;
     overflow: hidden;
+    flex: 1;
 }
 
 .footer a {
@@ -183,6 +184,11 @@ input[type="text"] {
 }
 
 @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 95%;
+    }
     /** Stop pushing content down when collapsing menu */
     .navbar {
         position: absolute;
