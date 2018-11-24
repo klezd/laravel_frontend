@@ -1,9 +1,14 @@
+var cartIcon;
 function sideChange() {
-    var cartIcon = document.getElementById("shopping-cart");
+    cartIcon = document.getElementById("shopping-cart");
     if( $(window).width() >= 768) {
-        cartIcon.onmouseover = function() {showShoppingcart()}
+        cartIcon.addEventListener("mouseover", showShoppingcart);
+        cartIcon.addEventListener("mouseleave", hideShoppingcart);        
+        cartIcon.removeEventListener("click", showShoppingcart);
     } else {
-        cartIcon.onclick = function() {showShoppingcart()}
+        cartIcon.addEventListener("click", showShoppingcart);        
+        cartIcon.removeEventListener("mouseover", showShoppingcart);
+        cartIcon.removeEventListener("mouseleave", hideShoppingcart);        
     }
 }
 
@@ -42,5 +47,21 @@ $('#newsletter-submit-form').submit(function(e) {
 });
 
 var showShoppingcart = function() {
-    console.log("show shopping cart")
+    console.log("show shopping cart");
+
+    /** Check if the cart is opening for mobile view */
+    if( $(window).width() < 768) {
+        // TODO check if cartIcon contains class show to remove or open
+    }
+
+    /** Check if the cart is opening for desktop view */
+    if( $(window).width() >= 768) {
+        // TODO if cartIcon has class show so don't add class
+    }
+
+    // AJAX call or cache data
+}
+
+var hideShoppingcart = function() {
+    console.log("hide shopping cart");
 }
