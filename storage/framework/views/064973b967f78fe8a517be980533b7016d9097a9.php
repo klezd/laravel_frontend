@@ -30,8 +30,8 @@
                                 </button>            
                             </div>
 
-                            <div class="bd-highlight nav-btn">
-                                <a id="shopping-cart" href="#">
+                            <div class="bd-highlight nav-btn" id="shopping-cart">
+                                <a id="shopping-cart-btn" href="#">
                                                                         
                                     <i class="fa fa-shopping-cart nav-fa-icons"></i> &nbsp;
                                     <span id="cart-info">3 items in cart</span>

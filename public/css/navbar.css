@@ -13,9 +13,12 @@
     width: 100%
 }
 
-.navbar a:not(#shopping-cart) {
-    color: black;
+.navbar a:not(#shopping-cart-btn) {
     font-weight: bold;
+}
+
+.navbar a {
+    color: black;
 }
 
 .navbar a.nav-link {
@@ -36,7 +39,7 @@
     font-weight: bold;
 }
 
-#shopping-cart {
+#shopping-cart-btn {
     border: #dddddd 1px solid;
     border-radius: 3px;
     display: block;
@@ -115,7 +118,7 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
 }
 
 /** Nav bar hover and active styles */
-#shopping-cart:hover {
+#shopping-cart-btn:hover {
     text-decoration: none;
 }
 .navbar a:hover {
@@ -125,6 +128,41 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     cursor: pointer;
 }
 
+/** Shopping cart */
+#shopping-cart.desktop {
+    position: relative;
+}
+
+.shopping-cart-info {
+    width: 400px;
+    min-height: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 80%;
+    z-index: 1000;
+    display: none;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.shopping-cart-info.show {
+    display: block !important;
+    position: absolute;
+}
+.info-table {
+    width: 95%;
+    margin: auto;
+    display: block;
+
+}
 /** Responsive */
 @media (min-width: 940px) {
     .navbar .nav-brand {
@@ -147,7 +185,7 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     #cart-info {
         display: inline;
     }
-    #shopping-cart {
+    #shopping-cart-btn {
         border: #4a4a4a 1px solid;
         border-radius: 5px;
         padding: 5px 10px;
@@ -195,6 +233,11 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
         display: block;
         width: 100%;
         border-bottom: #b3c6c7 1px solid;
+    }
+    .shopping-cart-info {
+        width: 100%;
+        position: absolute;
+        z-index: 1;
     }
 }
 

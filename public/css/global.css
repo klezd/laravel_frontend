@@ -16,6 +16,13 @@ html, body {
     height: 100vh;
 }
 
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none !important;
+}
+
 .body-wrap {
     min-height: 100%
 }
@@ -134,7 +141,7 @@ input[type="text"] {
     color: white;
     font-style: italic;
 }
-.subscribe-loading .fa-spinner{
+.text-loading .fa-spinner{
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
