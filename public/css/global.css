@@ -24,9 +24,10 @@ html, body {
     margin: auto;
     background-color:#ffffff;
     padding: 20px 0;
+    width: 100%;
 }
 .container {
-    max-width: 90%;
+    max-width: 95%;
 }
 /** Footer */
 .footer {
@@ -46,6 +47,7 @@ html, body {
     font-size: 14px;
 }
 .footer-wrap {
+    width: 95%;
     padding: 3px;
     margin: auto;
 }
@@ -107,7 +109,7 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
-.footer-form .submit-btn {
+.primary-btn {
     height: 35px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -169,13 +171,18 @@ input[type="text"] {
     .footer-form input {
         width: 100%;
     }
+    .navbar a {
+        font-size: 12px !important;
+    }
 }
 
 @media (min-width: 768px){
     .container {
-        max-width: 100%;
+        width: 95%;
+        max-width: 95%;
     }
     .content .container {
+        width: 90%;
         max-width: 90% !important;
     }
     .footer .col {
@@ -184,11 +191,6 @@ input[type="text"] {
 }
 
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        max-width: 100%;
-        min-width: 95%;
-    }
     /** Stop pushing content down when collapsing menu */
     .navbar {
         position: absolute;
@@ -210,12 +212,17 @@ input[type="text"] {
     .footer h1 {
         font-size: 18px;
     }
+    .footer-wrap {
+        width: 100%;
+        
+    }
 }
-@media (max-width: 560px) {
+@media (max-width: 576px) {
     .footer .col {
         width: 90%;
     }
 }
+
 @media (max-width: 320px) {
     .footer {
         padding: 10px;    

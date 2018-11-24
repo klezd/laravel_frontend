@@ -10,6 +10,7 @@
         <!-- Custom styles -->
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/navbar.css">
+        @yield('custom-page-style')
     </head>
     <body onresize="sideChange()" onload="sideChange()">
     <div class="body-wrap d-flex flex-column">
@@ -28,7 +29,8 @@
                                     <i class="fa fa-bars nav-fa-icons"></i>
                                 </button>            
                             </div>
-                            <div class=" bd-highlight nav-btn">
+
+                            <div class="bd-highlight nav-btn">
                                 <a id="shopping-cart" href="#">
                                                                         
                                     <i class="fa fa-shopping-cart nav-fa-icons"></i> &nbsp;
@@ -116,10 +118,9 @@
         </nav>
         
         <div class="content">
-            <div class="container">
-                @yield('page-content')
-            </div>
+            @yield('page-content')
         </div> <!-- end content page -->
+
         <div class="footer">
             <div class="d-flex justify-content-center flex-row flex-wrap footer-wrap">
                 <div class="col">
@@ -145,7 +146,7 @@
                     <div class="form-container d-flex flex-row">
                         <form action="newsletter/subscribe" class="footer-form" id="newsletter-submit-form">
                             <input type="text" name="email" id="email" placeholder=" &#xf003; Enter your email address"/>
-                            <input type="submit" class="submit-btn" value="SUBSCRIBE" >
+                            <input type="submit" class="primary-btn" value="SUBSCRIBE" >
                         </form>
                     </div>
                     <div class="loading-res" id="sub-status">

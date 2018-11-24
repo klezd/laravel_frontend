@@ -12,8 +12,9 @@ class NewsletterController extends Controller
         $responseText;
         if(isset($_POST['email'])) {
             $email = $_POST['email'];
+            //check for the 
             $check = preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i", $email);
-            if ( $check ) { //TODO Logic for checking email
+            if ( $check ) { 
                 $responseText = "<span class='res subscribe-success'><i class='fa fa-check'></i> Subscribed successfully!</span>";
             } else {
                 $responseText = "<span class='res subscribe-fail'><i class='fa fa-times'></i> Fail to subscribe!</span>";

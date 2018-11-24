@@ -42,7 +42,7 @@
     display: block;
     padding: 4px;
     background-color: #dddddd;
-    font-size: 18px;
+    font-size: 18px !important;
 }
 
 .nav-btn {
@@ -114,14 +114,15 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     display: none!important;
 }
 
-
 /** Nav bar hover and active styles */
-
 #shopping-cart:hover {
     text-decoration: none;
 }
 .navbar a:hover {
     text-decoration:none;
+}
+.nav-btn:hover {
+    cursor: pointer;
 }
 
 /** Responsive */

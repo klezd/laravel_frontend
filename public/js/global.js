@@ -1,12 +1,12 @@
 function sideChange() {
-    /*console.log('sideChange');
-    if( $(window).width() > 768) {
-        console.log('larger');
-        $('#navbar').hasClass('fixed-top') ? $('#navbar').removeClass('fixed-top') : {}
+    var cartIcon = document.getElementById("shopping-cart");
+    if( $(window).width() >= 768) {
+        cartIcon.onmouseover = function() {showShoppingcart()}
     } else {
-        $('#navbar').hasClass('fixed-top') ? {} : $('#navbar').addClass('fixed-top')
-    }*/
+        cartIcon.onclick = function() {showShoppingcart()}
+    }
 }
+
 $(document).ready(function() {
     $('span.subscribe-loading').hide();
 })
@@ -40,3 +40,7 @@ $('#newsletter-submit-form').submit(function(e) {
     });
     e.preventDefault();
 });
+
+var showShoppingcart = function() {
+    console.log("show shopping cart")
+}

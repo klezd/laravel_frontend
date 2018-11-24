@@ -39,6 +39,8 @@ class ProductServiceProvider extends ServiceProvider
                 'specialPrice' => ""
             ]
         ];
+        // Sort products
+        asort($products);
 
         view()->share('products', $products);
     }
