@@ -98,7 +98,10 @@ var ajaxCallLoadCart = function() {
         method: 'GET',
         dataType: 'json',
         cache: true,
-        header: {"cache-control": "max-age: 60, private"}
+        headers: {
+            'Cache-Control': 'max-age= 60',
+            'Cache-Control': 'private'
+        }
     });
 }
 
