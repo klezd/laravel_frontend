@@ -33,6 +33,7 @@
     color: white;
     font-weight: bold;
     text-align: center;
+    text-align: -webkit-center;
     position: absolute;
     top: 30%;
     vertical-align: middle;
@@ -100,6 +101,7 @@ h2.fav-prod-title span {
 .product-detail {
     margin: 10px 0;
     text-align: center;
+    text-align: -webkit-center;
 }
 
 @media (min-width: 1260px) { 
@@ -169,6 +171,7 @@ h2.fav-prod-title span {
 @media (max-width: 768px) {
     h2.fav-prod-title { 
         text-align: center;
+        text-align: -webkit-center;
         font-size: 1.5em;
     } 
     .banner-img, .banner-text {

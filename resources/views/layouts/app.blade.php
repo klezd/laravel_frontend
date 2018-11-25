@@ -33,17 +33,11 @@
                             <div class="bd-highlight nav-btn" id="shopping-cart">
                                 <a id="shopping-cart-btn" href="#">                                                                        
                                     <i class="fa fa-shopping-cart nav-fa-icons"></i> &nbsp;
-                                    <span id="cart-info">3 items in cart</span>
-                                    <span id="cart-totalprice"></span>
+                                    <span id="cart-sum"></span>
                                 </a>
                                 <div class="shopping-cart-info" id="shopping-cart-info">
-                                    <table class="info-table">
-                                        <tr>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                        </tr>
+                                    <table class="info-table" id="info-table">
+                                       
                                     </table>  
                                 </div>                   
                             </div>

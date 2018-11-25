@@ -1,5 +1,7 @@
 var cartIcon;
 var cartInfo;
+var cartSum;
+
 function sideChange() {
     cartIcon = document.getElementById("shopping-cart");
     if( $(window).width() >= 768) {
@@ -14,9 +16,11 @@ function sideChange() {
 }
 
 $(document).ready(function() {
-    $('span.subscribe-loading').hide();
+    sideChange();
+    $('span.subscribe-loading').hide(); // hide the loading span of newsletter subscribe
     ajaxCallLoadCart(); //load cart for once 
-})
+});
+
 $('#newsletter-submit-form').submit(function(e) {
     // remove all status if re-enter email to subscribe
     $('span.res').remove();
@@ -80,6 +84,15 @@ var showShoppingcart = function(e) {
 
 // AJAX call or cache data
 var ajaxCallLoadCart = function() {
+    console.log("load cart");
+    $.ajaxSetup({
+        beforeSend: function() {
+            $("#info-table").empty();
+        },
+        success: function(data) {
+            loadCartDataToView(data);
+        }
+    });
     $.ajax({
         url: 'cart/get',
         method: 'GET',
@@ -87,25 +100,38 @@ var ajaxCallLoadCart = function() {
         cache: true,
         header: {"cache-control": "max-age: 60, private"}
     });
-    $.ajaxSetup({
-        beforeSend: function() {
-            console.log('loading');
-            $('table.info-table').append(
-                '<tr>' + '<td class="text-loading"><span>' +
-                '<i class="fa fa-spinner"></i> Loading cart'+
-                '</span></td></tr>');
-        },
-        complete: function() {
-            $('table.info-table').empty();
-        },
-        success: function() {
-            loadCartDataToView();
-        }
-
-    })
 }
 
-var loadCartDataToView = function() {}
+var loadCartDataToView = function(data) {
+    cartSum = document.getElementById("cart-sum");
+    var table = document.getElementById("info-table");
+    var itemsInCart = data.items;
+    console.log(data);
+    cartSum.innerHTML = data.totalItems + " item(s) in your cart: <b>&#8364;" + data.totalPrice + "</b>";
+    for ( var i = 0; i < itemsInCart.length; i ++ ) {
+        var firsttr = document.createElement("tr"),
+            secondtr = document.createElement("tr");
+        firsttr.className += "product-in-cart";
+        secondtr.className += "product-in-cart";
+        firsttr.innerHTML = "<td width='30%' rowspan='2' class='product-in-cart-cell-row-2'><img src="+ itemsInCart[i].imgSrc +"></td>" + 
+                            "<th width='50%'>" + itemsInCart[i].name + "</th>" +
+                            "<td width='20%' rowspan='2' class='product-in-cart-cell-row-2'><i class='fa fa-times'></i></td>";
+        secondtr.innerHTML = "<td>" + itemsInCart[i].qty + " <i class='fa fa-times'></i> &#8364;" + itemsInCart[i].price + "</td>";
+        table.appendChild(firsttr); table.appendChild(secondtr);
+    }
+    /*
+    <tr class="product-in-cart">
+        <td width='30%' rowspan='2' class='product-in-cart-cell-row-2'><img src='img/products/scarf.jpg'></td>
+        <th width='50%'>Scarf</th>
+        <td width='20%' rowspan='2' class='product-in-cart-cell-row-2'><i class='fa fa-times'></i></td>
+    </tr>
+    <tr class="product-in-cart">
+        <td> 2 <i class='fa fa-times'></i> &#8364; 59.00</td>
+    </tr>
+    <tr class="checkout-btn">
+        <td colspan="3"><a class="primary-btn">Checkout</a></td>
+    </tr>*/
+}
 
 var hideShoppingcart = function(e) {
     cartInfo = document.getElementById("shopping-cart-info")

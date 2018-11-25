@@ -123,6 +123,9 @@ input[type="text"] {
     color: white;
     font-weight: 550;
     background-color: #22b5ae;
+    text-align: center;
+    text-align: -webkit-center;
+    text-transform: uppercase;
 }
 
 /** subscribe status */

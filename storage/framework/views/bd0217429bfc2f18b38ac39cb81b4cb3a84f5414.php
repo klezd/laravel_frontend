@@ -30,15 +30,15 @@
                                 </button>            
                             </div>
 
-                            <div class="bd-highlight nav-btn">
-                                <a id="shopping-cart" href="#">
-                                                                        
+                            <div class="bd-highlight nav-btn" id="shopping-cart">
+                                <a id="shopping-cart-btn" href="#">                                                                        
                                     <i class="fa fa-shopping-cart nav-fa-icons"></i> &nbsp;
-                                    <span id="cart-info">3 items in cart</span>
-                                    
+                                    <span id="cart-sum"></span>
                                 </a>
                                 <div class="shopping-cart-info" id="shopping-cart-info">
-                                    
+                                    <table class="info-table" id="info-table">
+                                       
+                                    </table>  
                                 </div>                   
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                         </form>
                     </div>
                     <div class="loading-res" id="sub-status">
-                        <span class="subscribe-loading"><i class="fa fa-spinner"></i> Subscribing to newsletter</span>
+                        <span class="subscribe-loading text-loading"><i class="fa fa-spinner"></i> Subscribing to newsletter</span>
                     </div>
 
                 </div>
