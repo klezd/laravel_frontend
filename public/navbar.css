@@ -90,6 +90,8 @@ li.nav-item {
 /** Dropdown */
 ul.dropdown-menu {
     list-style: none !important;
+}
+ul.dropdown-menu {
     background-color: #b3c6c7;
 }
 .dropdown-caret {
@@ -114,7 +116,6 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     position: absolute;
     top: 0;
     left: 158px;
-    list-style: none !important;
     z-index: 1000;
     display: none!important;
 }
@@ -142,7 +143,7 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
 
 .shopping-cart-info {
     width: 400px;  
-    height: 0;
+    height: auto;
     position: absolute;
     right: 0;
     top: 80%;
@@ -163,7 +164,6 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
 .shopping-cart-info.show {
     display: block !important;
     position: absolute;
-    height: auto;
 }
 .info-table {
     width: 95%;

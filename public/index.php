@@ -25,5 +25,5 @@ $app = require __DIR__.'/../bootstrap/app.php';
 |
 */
 
-//$app->run($app['request']);
-$app->run();
+$app->run($app['request']);
+//$app->run();
