@@ -119,6 +119,25 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     z-index: 1000;
     display: none!important;
 }
+/** Show sub(2) menu when sub dropdown menu (year) is hover */
+li.nav-item.collections .dropdown-menu .dropdown-submenu:hover .dropdown-menu  {
+    display: block !important;
+    position: absolute;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s; 
+}
+/** Show sub(1) menu when collections dropdown menu is hover */
+li.nav-item.collections:hover .dropdown-menu {
+    display: block !important;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s; 
+}
 
 /** Nav bar hover and active styles */
 #shopping-cart-btn:hover {
@@ -239,13 +258,6 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     }
     li.nav-item.collections .dropdown-menu .dropdown-submenu:hover, ul.dropdown-secondmenu li:hover {
         background-color: #a19f9e;
-    }
-    li.nav-item.collections .dropdown-menu .dropdown-submenu:hover .dropdown-menu  {
-        display: block !important;
-        position: absolute;
-    }
-    li.nav-item.collections:hover .dropdown-menu {
-        display: block !important;
     }
  }
 @media (max-width: 768px) {

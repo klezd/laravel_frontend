@@ -118,6 +118,24 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     z-index: 1000;
     display: none!important;
 }
+/** Show sub menu on hover */
+li.nav-item.collections:hover .dropdown-menu {
+    display: block !important;
+    -webkit-animation: fadein 1s; 
+    -moz-animation: fadein 1s; 
+     -ms-animation: fadein 1s; 
+      -o-animation: fadein 1s; 
+         animation: fadein 1s; 
+}
+li.nav-item.collections .dropdown-menu .dropdown-submenu:hover .dropdown-menu  {
+    display: block !important;
+    position: absolute;
+    -webkit-animation: fadein 1s; 
+    -moz-animation: fadein 1s; 
+     -ms-animation: fadein 1s; 
+      -o-animation: fadein 1s; 
+         animation: fadein 1s;
+}
 
 /** Nav bar hover and active styles */
 #shopping-cart-btn:hover {
@@ -142,7 +160,7 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
 
 .shopping-cart-info {
     width: 400px;  
-    height: 0;
+    height: auto;
     position: absolute;
     right: 0;
     top: 80%;
@@ -163,8 +181,13 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
 .shopping-cart-info.show {
     display: block !important;
     position: absolute;
-    height: auto;
+    -webkit-animation: fadein 1s; 
+       -moz-animation: fadein 1s; 
+        -ms-animation: fadein 1s; 
+         -o-animation: fadein 1s; 
+            animation: fadein 1s;
 }
+
 .info-table {
     width: 95%;
     margin: auto;
@@ -191,8 +214,10 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
 .product-in-cart .product-in-cart-cell-row-2 img{
     display: block;
     margin: auto;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100px;
+    max-height: 100px;
+    width: 90%;
+    height: 90%;
 }
 
 /** Responsive */
@@ -239,13 +264,6 @@ li.nav-item.collections .dropdown-menu .dropdown-submenu .dropdown-secondmenu {
     }
     li.nav-item.collections .dropdown-menu .dropdown-submenu:hover, ul.dropdown-secondmenu li:hover {
         background-color: #a19f9e;
-    }
-    li.nav-item.collections .dropdown-menu .dropdown-submenu:hover .dropdown-menu  {
-        display: block !important;
-        position: absolute;
-    }
-    li.nav-item.collections:hover .dropdown-menu {
-        display: block !important;
     }
  }
 @media (max-width: 768px) {
